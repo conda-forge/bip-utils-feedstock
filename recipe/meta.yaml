@@ -1,5 +1,5 @@
 {% set name = "bip-utils" %}
-{% set version = "2.9.1" %}
+{% set version = "2.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ebellocchia/bip_utils/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: af490c3aa3c6a3d261ec97e53e3d8dba6db1f306c2d86a15e9c699bc61550a89
+  sha256: f6534f6ca78f8dd79f8581aed4acc62e7ae0b272ba9ba964a1e7c56b7916e235
   patches:
     - fix-requirements-conda.patch
 
