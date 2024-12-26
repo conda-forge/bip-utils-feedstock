@@ -20,6 +20,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - cbor2 ~=5.1
     - coincurve >=15.0.1,<20.0.0
