@@ -14,9 +14,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
-  number: 1
+  number: 2
 
 requirements:
+  build:
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - python {{ python_min }}  # [build_platform != target_platform]
   host:
     - python {{ python_min }}
     - pip
