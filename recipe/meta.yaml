@@ -1,5 +1,5 @@
 {% set name = "bip-utils" %}
-{% set version = "2.10.0" %}
+{% set version = "2.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,8 @@ package:
 
 source:
   url: https://github.com/ebellocchia/bip_utils/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6d4e382f91361e52b9330d380b0abaffffc36b775f55931fb2e34a23dcd84040
+  sha256: 96bf16fed57d0837890314ec7e67c9ad8a6effdc62f9149139189bd22a0471e3
+  patches: fix-requirements-conda.patch
 
 build:
   noarch: python
@@ -26,9 +27,10 @@ requirements:
     - ecdsa ~=0.16
     - ed25519-blake2b >=1.4.1,<2.0.0
     - py-sr25519-bindings >=0.1.3,<2.0.0
-    - pycryptodome ~=3.15
-    - pynacl ~=1.5
+    - pycryptodome =3.*
+    - pynacl =1.5*
     - python >={{ python_min }}
+    - pytoniq-core
 
 test:
   imports:
