@@ -8,6 +8,7 @@ package:
 source:
   url: https://github.com/ebellocchia/bip_utils/archive/refs/tags/v{{ version }}.tar.gz
   sha256: f5c29d8d0a33bbffb7f4c6667659d0100f2e908ce6fa2708e5e1e3b967702e70
+  patches: fix-requirements-conda.patch
 
 build:
   noarch: python
@@ -26,9 +27,10 @@ requirements:
     - ecdsa ~=0.16
     - ed25519-blake2b >=1.4.1,<2.0.0
     - py-sr25519-bindings >=0.1.3,<2.0.0
-    - pycryptodome ~=3.15
-    - pynacl ~=1.5
+    - pycryptodome =3.*
+    - pynacl =1.5*
     - python >={{ python_min }}
+    - pytoniq-core
 
 test:
   imports:
