@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/ebellocchia/bip_utils/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 96bf16fed57d0837890314ec7e67c9ad8a6effdc62f9149139189bd22a0471e3
+  patches:
+    - fix-requirements-conda.patch
 
 build:
   noarch: python
