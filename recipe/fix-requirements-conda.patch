@@ -1,6 +1,6 @@
 --- a/bip-utils/requirements.txt	2024-02-10 11:45:57.286921697 -0600
 +++ b/bip-utils/requirements.txt	2024-02-10 11:45:29.150649484 -0600
-@@ -1,16 +1,8 @@
+@@ -1,18 +1,9 @@
  cbor2>=5.1.2,<6.0.0
 -coincurve>=15.0.1,<19.0.0; python_version == '3.7'
 -coincurve>=15.0.1; python_version > '3.7' and python_version < '3.10'
@@ -18,5 +18,8 @@
 -py-sr25519-bindings>=0.1.3,<2.0.0; python_version < '3.10'
 -py-sr25519-bindings>=0.1.4,<2.0.0; python_version == '3.10'
 -py-sr25519-bindings>=0.2.0,<2.0.0; python_version >= '3.11'
--typing_extensions>=3.7.2; python_version == '3.7'
+-py-sr25519-bindings>=0.2.2,<2.0.0; python_version >= '3.13'
+-pytoniq-core-fork>=0.1.47,<0.2.0
+-typing_extensions
 +py-sr25519-bindings>=0.2.0,<2.0.0
++pytoniq-core>=0.1.46,<0.2.0
