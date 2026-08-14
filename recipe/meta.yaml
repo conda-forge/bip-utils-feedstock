@@ -30,7 +30,7 @@ requirements:
     - pycryptodome =3.*
     - pynacl =1.5*
     - python >={{ python_min }}
-    - pytoniq-core
+    - pytoniq-core <0.2.0,>=0.1.46
 
 test:
   imports:
